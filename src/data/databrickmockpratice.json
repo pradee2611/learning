@@ -1,0 +1,534 @@
+[
+  {
+    "question_number": 1,
+    "question": "A company is developing an AI-powered summarization tool that generates concise summaries of legal documents. After running experiments with three different language models, the evaluation results include ROUGE-1, ROUGE-2, and ROUGE-L scores for each model. Which model should be selected for deployment?",
+    "choices": [
+      "Model B: ROUGE-1 = 0.82, ROUGE-2 = 0.51, ROUGE-L = 0.74",
+      "Model C: ROUGE-1 = 0.79, ROUGE-2 = 0.57, ROUGE-L = 0.72",
+      "Model A: ROUGE-1 = 0.76, ROUGE-2 = 0.54, ROUGE-L = 0.70",
+      "Model D: ROUGE-1 = 0.65, ROUGE-2 = 0.45, ROUGE-L = 0.60"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 2,
+    "question": "You are designing a pipeline to write streaming text chunks into a Delta Lake table registered in Unity Catalog. The requirement is to ensure: Atomic writes, No data duplication, Efficient query performance. Which method provides the most reliable and scalable way to write the chunked text data while meeting these requirements?",
+    "choices": [
+      "Use Delta MERGE INTO with WHEN NOT MATCHED THEN INSERT on the chunk ID",
+      "Write directly to Unity Catalog as raw JSON, then transform into Delta",
+      "Use overwrite mode to replace data in the Delta table every time",
+      "Use append mode with a unique chunk ID in a Delta table"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 3,
+    "question": "A team of ML engineers is preparing to deploy an AI-powered chatbot that runs on a Databricks cluster. They want to optimize the workload for performance, cost-efficiency, and fault tolerance while ensuring that the chatbot remains highly responsive to user queries. Which configurations should they prioritize?",
+    "choices": [
+      "Configuring autoscaling clusters to dynamically adjust resources based on workload",
+      "Deploying models on an ephemeral cluster that shuts down after every inference request",
+      "Running inference on an interactive cluster to keep it always available",
+      "Using a single high-memory CPU instance to handle all inference requests"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 4,
+    "question": "You are developing an AI-powered customer support chatbot and need to select a pre-trained LLM from a model hub. You review the model card and find the following metadata: Task: Conversational AI, Text Generation, Model Size: 7B parameters, Training Data: Public web data and proprietary customer support transcripts, Fine-Tuned for: Multi-turn dialogue and contextual understanding, Limitations: Struggles with highly domain-specific jargon. Based on this metadata, which factor should be your primary consideration when deciding whether to use this model for your chatbot?",
+    "choices": [
+      "The model's fine-tuning for multi-turn dialogue and contextual understanding",
+      "The model's limitations, since struggles with domain-specific jargon may impact accuracy",
+      "The model size (7B parameters), since larger models are always better for chatbots",
+      "The training data, because public web data may introduce security risks"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 5,
+    "question": "Your organization is subject to strict data privacy regulations (e.g., GDPR, CCPA) and wants to ensure compliance when deploying generative AI models in Databricks. What is the best practice for managing sensitive data in the context of AI model governance?",
+    "choices": [
+      "Store training data and models in Unity Catalog and apply row-level and column-level security",
+      "Store models in a shared Databricks workspace and rely on workspace-level access controls",
+      "Encrypt training data but store unencrypted models in Databricks File Store (DBFS) for performance optimization",
+      "Disable MLflow logging to prevent tracking sensitive information related to model training"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 6,
+    "question": "A software development team is building an AI-powered code autocompletion tool for developers. The tool needs to generate accurate code snippets with minimal latency while supporting multiple programming languages. Which LLM would be the most appropriate for this use case?",
+    "choices": [
+      "A code-specific LLM fine-tuned on software repositories",
+      "A conversational chatbot LLM designed for customer support",
+      "A multimodal LLM designed for processing both text and images",
+      "A general-purpose LLM trained on diverse text datasets"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 7,
+    "question": "You are designing a customer service chatbot using Databricks' Generative AI capabilities. The chatbot handles user queries and generates responses based on internal documentation. To comply with data privacy policies, it must avoid leaking sensitive or confidential information. Which metaprompting strategy is most effective in preventing private data leaks?",
+    "choices": [
+      "Explicitly instructing the model not to generate or expose private or confidential information",
+      "Using fine-tuning to completely remove all references to confidential data",
+      "Allowing the model to decide whether a response contains private data",
+      "Setting the model's temperature to a very low value to restrict response creativity"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 8,
+    "question": "You are developing a Retrieval-Augmented Generation (RAG) application that leverages a large document repository to provide accurate responses. Many source documents contain extraneous content such as disclaimers, advertisements, footers, and unrelated text. Which of the following strategies is the most effective in filtering out extraneous content that could degrade the quality of the RAG model's responses?",
+    "choices": [
+      "Apply a regex-based approach to remove common patterns like disclaimers, advertisements, and footers before indexing.",
+      "Split documents into smaller chunks without filtering and allow vector similarity search to prioritize relevant segments.",
+      "Tokenize the document and use stopword removal to eliminate unnecessary words before indexing the text.",
+      "Retain all content in the source documents and rely on the model's attention mechanism to ignore extraneous content during retrieval."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 9,
+    "question": "You are deploying a Retrieval-Augmented Generation (RAG) model using Databricks Model Serving. Which of the following is the most critical factor to consider when designing the deployment process?",
+    "choices": [
+      "Ensuring that the retrieval system is optimized for low-latency and high recall",
+      "Using a single large prompt for all queries to maximize context retention",
+      "Deploying the model before designing the retrieval pipeline",
+      "Disabling authentication to simplify access for all users"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 10,
+    "question": "You are developing a Generative AI application and need a tool to efficiently train a transformer-based language model with distributed training capabilities. Which of the following tools would be the most appropriate choice?",
+    "choices": [
+      "TensorFlow",
+      "Databricks AutoML",
+      "Delta Live Tables",
+      "Hugging Face Transformers"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 11,
+    "question": "You are working on a retrieval-augmented generation (RAG) pipeline in Databricks. To assess the performance of the retrieval component, you decide to evaluate the relevance and ranking of the retrieved documents. Which of the following metrics is the best choice for measuring the precision of the top-$k$ retrieved results?",
+    "choices": [
+      "Mean Reciprocal Rank (MRR)",
+      "Word Error Rate (WER)",
+      "Normalized Discounted Cumulative Gain (NDCG)",
+      "BLEU Score"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 12,
+    "question": "You are building a Generative AI application that assists doctors with medical recommendations based on trusted sources like medical journals and clinical guidelines. However, the LLM sometimes generates hallucinated information (incorrect but confident-sounding responses). What is the most effective way to prevent this issue?",
+    "choices": [
+      "Use Retrieval-Augmented Generation (RAG) to ground responses in verified external sources.",
+      "Manually review and approve all responses before displaying them to users.",
+      "Fine-tune the model with more medical literature to improve its factual accuracy.",
+      "Increase the LLM's temperature setting to make responses more diverse and reduce hallucinations."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 13,
+    "question": "A data scientist is deploying a Retrieval-Augmented Generation (RAG) application on Databricks and needs to register the model in MLflow. Which aspect of the model signature is the most critical to ensure smooth inference in production?",
+    "choices": [
+      "The model signature should include the expected input schema and output schema.",
+      "The model signature should be left blank so that MLflow automatically infers the schema.",
+      "The model signature should be registered only for structured data models, not for generative AI models.",
+      "The model signature should define the vector database storage format for document embeddings."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 14,
+    "question": "You are developing a generative AI application in Databricks and need to deploy a trained model efficiently. Which approaches are recommended for deploying the model in Databricks?",
+    "choices": [
+      "Use Databricks Model Serving to create an endpoint for serving the model in a production environment.",
+      "Store the model as a Parquet file in a Delta table and load it dynamically at runtime.",
+      "Save the model as a pickle file and manually upload it to an S3 bucket for inference."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 15,
+    "question": "A data scientist is developing a Retrieval-Augmented Generation (RAG) application in Databricks and needs to deploy a model endpoint. What step is missing from the following deployment sequence: Develop and fine-tune an embedding model, Deploy the embedding model to Databricks Model Serving, Vectorize and store documents in a vector database, ________________________________, Deploy the endpoint and test API responses?",
+    "choices": [
+      "Register the retrieval and generation models in Unity Catalog",
+      "Create a Spark job to transform unstructured documents before retrieval",
+      "Manually create an API Gateway to expose the model endpoint",
+      "Set up a cron job to periodically refresh the vector embeddings"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 16,
+    "question": "You are working on a generative AI application that requires a model to generate high-quality text summaries from long documents. You are selecting a model from a model hub that provides metadata such as model type, training dataset, and fine-tuning history. Which of the following model metadata characteristics is most critical for ensuring high-quality summarization performance?",
+    "choices": [
+      "Model type: Transformer-based summarization model",
+      "Model size: Larger model parameter count",
+      "Inference speed: Model optimized for real-time responses",
+      "Fine-tuning history: Model fine-tuned on sentiment analysis data"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 17,
+    "question": "What is the primary role of the model signature when deploying a Retrieval-Augmented Generation (RAG) application in Databricks?",
+    "choices": [
+      "To define the expected input format and output schema of the deployed model.",
+      "To improve the accuracy of the retrieval component by ranking documents.",
+      "To optimize the embedding model for faster similarity searches.",
+      "To fine-tune the generative model for better coherence in responses."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 18,
+    "question": "You are using an LLM to generate executive summaries for business reports. The initial outputs tend to be too lengthy. Which of the following prompts would best adjust the response to a more concise format while retaining key details?",
+    "choices": [
+      "\"Summarize the following report in under 100 words, keeping only the most critical insights: [Full report]\"",
+      "\"Expand this summary with additional context and background details: [Full report]\"",
+      "\"Rewrite this report in a more persuasive and engaging manner: [Full report]\"",
+      "\"Provide a word-for-word transcription of this report: [Full report]\""
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 19,
+    "question": "You have trained a Generative AI model in Databricks and now need to deploy it for inference. The model should be available for batch and real-time inference while ensuring efficient version tracking and reproducibility. Which tool should you use?",
+    "choices": [
+      "MLflow Models",
+      "Unity Catalog",
+      "Delta Sharing",
+      "Databricks SQL"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 20,
+    "question": "A team of data scientists is evaluating the output of a generative AI model used for customer support chatbots. They need to identify potential issues related to response quality and safety. Which of the following are appropriate qualitative assessment techniques to detect these issues?",
+    "choices": [
+      "Evaluating the model's adherence to ethical guidelines",
+      "Verifying response formatting consistency (e.g., presence of punctuation and capitalization)",
+      "Measuring perplexity scores of responses"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 21,
+    "question": "A Generative AI Engineer is building a RAG application to collect structured and unstructured data from dynamic websites. The solution must handle pagination, follow links, and extract text from HTML efficiently. Which Python package ensures minimal manual intervention?",
+    "choices": [
+      "scrapy",
+      "lxml",
+      "requests",
+      "pytesseract"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 22,
+    "question": "A Generative AI Engineer is designing a retrieval-augmented generation (RAG) system for a chatbot that needs to extract text from PDF documents containing scanned pages. The solution should be implemented with minimal code complexity and should handle various fonts and handwriting styles. Which Python package is the best choice for extracting text from these PDF files?",
+    "choices": [
+      "pytesseract",
+      "pdfplumber",
+      "PyPDF2",
+      "fitz (PyMuPDF)"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 23,
+    "question": "A Databricks Generative AI model is being optimized to augment user prompts based on key fields and terms extracted from the input. Which of the following approaches would most effectively ensure accurate contextual understanding?",
+    "choices": [
+      "Utilizing an intent classification model",
+      "Using a predefined keyword dictionary for all user inputs",
+      "Removing all non-alphanumeric characters from user input"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 24,
+    "question": "You are tasked with deploying a Retrieval-Augmented Generation (RAG) application in Databricks. Which resource is the most appropriate for serving features in a real-time RAG application?",
+    "choices": [
+      "Feature Store with Online Serving",
+      "Unity Catalog",
+      "MLflow Model Registry",
+      "Delta Live Tables (DLT)"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 25,
+    "question": "A chatbot powered by a Generative AI model is designed to answer customer inquiries about technical issues with cloud infrastructure. The team wants to improve the prompt augmentation process by dynamically incorporating relevant key fields, terms, and user intent from customer queries. Which strategy best ensures that the chatbot generates responses with relevant and precise context?",
+    "choices": [
+      "Extract key entities and intents from the user's query and append them to a structured prompt template before sending it to the LLM.",
+      "Rely solely on the model's pre-trained knowledge without retrieving additional context from the conversation.",
+      "Include only the last user input in the prompt to keep the query short and concise.",
+      "Use the entire chat history as the prompt input to provide as much context as possible."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 26,
+    "question": "You are a Generative AI engineer working on deploying a large language model (LLM) in Databricks for an enterprise AI chatbot. The model needs to be efficiently deployed to support real-time inference with minimal latency while ensuring cost-effectiveness. Which of the following options is the best approach for deploying the LLM in Databricks?",
+    "choices": [
+      "Deploy the model as a Databricks Model Serving endpoint using a GPU-backed cluster",
+      "Deploy the model using a standard Apache Spark job on a general-purpose CPU cluster",
+      "Deploy the model as a batch job using MLflow Model Registry",
+      "Store the model in Delta Lake and directly query it using Spark SQL"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 27,
+    "question": "A Generative AI Engineer is building an AI-powered customer support system that automatically extracts the key issue from long customer complaints and presents a brief summary to human agents. The summarized issue must be concise while retaining essential details. Which Natural Language Processing (NLP) task category should they use to evaluate potential LLMs for this application?",
+    "choices": [
+      "Summarization",
+      "Named Entity Recognition (NER)",
+      "Text Generation",
+      "Tokenization"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 28,
+    "question": "You are testing different chunking strategies for a Generative AI-based retrieval system and need to evaluate their effectiveness. Which metric would be most useful for assessing the impact of chunking on retrieval quality?",
+    "choices": [
+      "Embedding similarity score between chunks and queries",
+      "The compression ratio of the chunked document",
+      "The number of token overlaps between adjacent chunks",
+      "The total number of chunks generated per document"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 29,
+    "question": "You are designing a real-time chatbot for customer service that requires fast response times, minimal latency, and cost-effective deployment. Which type of large language model (LLM) would be the best choice for this application?",
+    "choices": [
+      "A small, fine-tuned LLM optimized for low-latency inference (e.g., DistilGPT, LLama 2-7B) running on edge devices",
+      "A large-scale, parameter-heavy foundation model (e.g., GPT-4 175B) running on cloud GPUs",
+      "An unoptimized open-source LLM with billions of parameters running on commodity CPUs",
+      "A domain-specific LLM trained for scientific research with high computational requirements"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 30,
+    "question": "You are designing a Generative AI model that leverages third-party data sources for training. To ensure compliance with legal and licensing requirements, what is the best approach?",
+    "choices": [
+      "Verify the licensing terms for all data sources and ensure they permit AI training and commercial use",
+      "Use any data found in open-source repositories without concern, as long as attribution is provided",
+      "Scrape data from the web freely as long as it is not explicitly blocked by robots.txt",
+      "Assume that all publicly available datasets can be used without restriction since they are freely accessible"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 31,
+    "question": "You are designing a Generative AI-powered question-answering system that requires high accuracy, factual consistency, and the ability to cite sources. Which LLM would be the best choice for this use case?",
+    "choices": [
+      "GPT-4",
+      "BERT",
+      "T5",
+      "Stable Diffusion"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 32,
+    "question": "A financial services company is using Databricks to process and analyze sensitive customer data. To comply with data governance best practices, they need to ensure access control, auditing, and compliance with regulatory requirements like GDPR and HIPAA. Which features in Databricks should they implement to enforce strong data governance?",
+    "choices": [
+      "Databricks Secrets to manage and store sensitive credentials securely",
+      "Disabling role-based access control (RBAC) to allow full team access",
+      "Using personal access tokens (PATs) without expiration for authentication"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 33,
+    "question": "A team is developing a generative AI-powered assistant in Databricks that summarizes large datasets. They want to minimize hallucinations when generating responses. Which strategies should they use when designing metaprompts?",
+    "choices": [
+      "Include explicit instructions in the prompt, such as \"If uncertain, state 'I don't know' rather than generating an answer\".",
+      "Instruct the model to provide responses even when the confidence level is low to ensure continuous output.",
+      "Request multiple answers from the model and manually select the most reasonable one."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 34,
+    "question": "A company is deploying a Generative AI-powered chatbot that assists users with financial planning. To prevent malicious users from injecting harmful prompts that could manipulate the chatbot's responses, which technique should be implemented as a guardrail?",
+    "choices": [
+      "Input sanitization and prompt filtering",
+      "Reducing the model's response length",
+      "Disabling logging to avoid storing harmful inputs",
+      "Increasing the model's temperature setting"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 35,
+    "question": "You are tasked with selecting the best generative AI model for producing high-quality images in Databricks. Your evaluation considers two key metrics: Inception Score (IS): Higher values indicate better quality and diversity of images. Frechet Inception Distance (FID): Lower values indicate higher similarity to real images. Here are the results from three trained models: Model X: IS = 8.5, FID = 30, Model Y: IS = 8.0, FID = 15, Model Z: IS = 7.5, FID = 12. Which model should you select for the highest image quality while maintaining diversity?",
+    "choices": [
+      "Model Y",
+      "Model Z",
+      "Selecting based only on the highest IS",
+      "Selecting based only on the lowest FID"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 36,
+    "question": "A company wants to deploy a large language model (LLM) for real-time customer support. The model should minimize latency while maintaining high accuracy. Given the following evaluation metrics, which factors should be prioritized when selecting the LLM?",
+    "choices": [
+      "Latency",
+      "Tokenization Efficiency",
+      "FLOPs"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 37,
+    "question": "You are evaluating the performance of a RAG-based application using MLflow. Which metric is most appropriate for assessing the relevance of retrieved documents before they are fed into the generative model?",
+    "choices": [
+      "Mean Reciprocal Rank (MRR)",
+      "Log Perplexity Loss",
+      "BLEU Score",
+      "Perplexity"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 38,
+    "question": "A team is building a chatbot application and is selecting a generative AI model from a model hub. They want to ensure the model they choose aligns with their goals, including accuracy, response latency, and bias considerations. When reviewing the model card, which of the following factors is the most critical for making an informed selection?",
+    "choices": [
+      "Training Dataset Distribution and Bias Analysis",
+      "The Model's Release Date",
+      "The Number of GitHub Stars the Model Repository Has",
+      "The Model's File Size"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 39,
+    "question": "A company has deployed a customer support chatbot powered by a generative AI model. The chatbot is designed to assist users with product troubleshooting but has been generating inconsistent responses. Which qualitative assessment would best help identify common issues related to response quality?",
+    "choices": [
+      "Checking whether responses are factually accurate, contextually relevant, and free from hallucinations.",
+      "Ensuring the chatbot never asks clarifying questions, assuming the user query is always well-formed.",
+      "Prioritizing responses that are vague and generic to reduce the risk of misinformation.",
+      "Evaluating whether the chatbot always generates long responses, regardless of query complexity."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 40,
+    "question": "A retail company is developing a generative AI chatbot for customer support that performs multi-stage reasoning. The chatbot must first understand user intent, retrieve relevant information, and then generate a personalized response. What is the most effective sequence of tools for this multi-stage reasoning pipeline?",
+    "choices": [
+      "Intent recognition → Knowledge base retrieval → Function calling → Response generation",
+      "Response generation → Knowledge base retrieval → Function calling → Intent recognition",
+      "Generate a response first and refine it afterward if the customer is dissatisfied",
+      "Function calling → Knowledge base retrieval → Intent recognition → Response generation"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 41,
+    "question": "A team is building a Retrieval-Augmented Generation (RAG) model using Databricks to assist enterprise customers with complex inquiries. To ensure high-quality and trustworthy knowledge, which strategies should they adopt when selecting source documents?",
+    "choices": [
+      "Ensure that document embeddings are stored in a vector database for efficient retrieval.",
+      "Avoid using metadata during retrieval, as it unnecessarily complicates the process.",
+      "Rely on keyword-based document retrieval instead of semantic search to keep retrieval simple."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 42,
+    "question": "A Generative AI Engineer is working on a document retrieval system where text chunks are embedded and stored in a vector database. After processing the corpus, the engineer finds that query retrieval times are slowing down significantly due to an excessive number of embeddings. Which strategies can optimize the efficiency of the retrieval system while maintaining accuracy?",
+    "choices": [
+      "Apply Principal Component Analysis (PCA) to reduce embedding dimensionality",
+      "Increase chunk overlap to ensure embeddings capture more context",
+      "Reduce the chunk size significantly to improve retrieval granularity"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 43,
+    "question": "A retail company wants to implement semantic search to improve product recommendations. They have stored product embeddings in a FAISS index inside Databricks. What is the best approach to perform a similarity search query in Databricks?",
+    "choices": [
+      "Use a k-nearest neighbors (KNN) search directly on a FAISS index to find the closest vectors.",
+      "Query the FAISS index using Databricks Delta Live Tables (DLT) for real-time similarity matching.",
+      "Store embeddings in a Hive table and use LIKE SQL queries for similarity matching.",
+      "Convert embeddings into JSON format and query them using Databricks SQL's JSON functions."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 44,
+    "question": "A team of data scientists is working on a Generative AI application in Databricks. They want to store and search embeddings efficiently using a Vector Search index. Which of the following steps is necessary when creating a Vector Search index in Databricks?",
+    "choices": [
+      "Configure the Vector Search index on an existing Delta Lake table that contains the embeddings.",
+      "Use Databricks AutoML to generate embeddings and automatically create a Vector Search index.",
+      "Deploy an external Elasticsearch cluster to support Vector Search in Databricks.",
+      "Use Databricks Feature Store to store embeddings and automatically create a Vector Search index."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 45,
+    "question": "A Generative AI Engineer is working on an AI-powered virtual assistant for a legal firm. The assistant answers client inquiries regarding case statuses, legal procedures, and document requirements. After deployment, users report that while the assistant provides general legal guidance correctly, it often fails to retrieve specific case details when asked about individual cases. Which of the following strategies would most effectively improve the assistant's ability to answer questions about individual case statuses?",
+    "choices": [
+      "Integrate a feature store that maps case_id to relevant case details, such as hearing dates and assigned attorneys.",
+      "Reduce the maximum token limit for responses to ensure the model generates concise, structured answers.",
+      "Fine-tune the model with additional training data on legal terminology to improve general knowledge.",
+      "Increase the randomness (temperature) of response generation to allow the model to explore different ways of answering legal queries."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  }
+]
