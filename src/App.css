@@ -207,17 +207,139 @@
   border-top: 2px solid #e0e0e0;
 }
 
+/* Tablet and below */
+@media (max-width: 968px) {
+  .app-header {
+    padding: 30px 20px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
+  
+  .mode-selector {
+    padding: 20px;
+  }
+  
+  .mode-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 14px 20px;
+  }
+  
+  .btn-large {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices */
 @media (max-width: 768px) {
-  .question-sets-grid {
-    grid-template-columns: 1fr;
+  .app-header {
+    padding: 25px 15px;
+  }
+  
+  .app-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+  }
+  
+  .app-header p {
+    font-size: 0.9rem;
+  }
+  
+  .question-count {
+    font-size: 0.85rem;
+    margin-top: 8px;
   }
   
   .question-set-selector {
-    padding: 20px;
+    padding: 15px;
   }
   
   .selector-container {
-    padding: 20px;
+    padding: 20px 15px;
+  }
+  
+  .selector-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .selector-description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .selector-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .selector-actions .btn {
+    width: 100%;
+  }
+  
+  .question-sets-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .question-set-card {
+    padding: 15px;
+  }
+  
+  .set-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .set-info p {
+    font-size: 0.9rem;
+  }
+  
+  .mode-buttons {
+    margin-bottom: 20px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .app-header {
+    padding: 20px 10px;
+  }
+  
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .app-header p {
+    font-size: 0.85rem;
+  }
+  
+  .question-set-selector {
+    padding: 10px;
+  }
+  
+  .selector-container {
+    padding: 15px 10px;
+  }
+  
+  .selector-container h2 {
+    font-size: 1.3rem;
+  }
+  
+  .btn {
+    padding: 12px 16px;
+    font-size: 0.9rem;
   }
 }
 
