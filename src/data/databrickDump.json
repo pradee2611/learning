@@ -57,7 +57,7 @@
         "C. Feature Serving",
         "D. AutoML"
       ],
-      "correct_answer": "B",
+      "correct_answer": "C",
       "is_multiple_choice": false
     },
     {
@@ -551,7 +551,7 @@
         "C. Llama-2-70b-chat-hf",
         "D. whisper-large-v3 (1.6B)"
       ],
-      "correct_answer": "A",
+      "correct_answer": "D",
       "is_multiple_choice": false
     },
     {
@@ -563,7 +563,7 @@
         "C. Inference Tables",
         "D. Feature Serving"
       ],
-      "correct_answer": "c",
+      "correct_answer": "C",
       "is_multiple_choice": false
     },
     {
@@ -636,7 +636,7 @@
         "C. Llama-2-70b-hf",
         "D. mpt-7b-8k-instruct"
       ],
-      "correct_answer": "B",
+      "correct_answer": "A",
       "is_multiple_choice": false
     },
     {
