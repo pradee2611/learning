@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import FileUpload from './components/FileUpload'
 import StudyMode from './components/StudyMode'
 import ExamMode from './components/ExamMode'
-import databrickMock1 from './data/databrickmock1.json'
-import databrickMockPractice from './data/databrickmockpratice.json'
 import databrickDump from './data/databrickDump.json'
 import './App.css'
 
@@ -18,8 +16,6 @@ function App() {
   useEffect(() => {
     // Combine all question sets
     const allQuestionSets = [
-      { data: databrickMock1, source: 'Mock Exam 1', key: 'mock1' },
-      { data: databrickMockPractice, source: 'Mock Practice', key: 'mockPractice' },
       { data: databrickDump, source: 'Databricks Dump', key: 'dump' }
     ]
 
