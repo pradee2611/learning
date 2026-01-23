@@ -1,0 +1,626 @@
+[
+  {
+    "question_number": 1,
+    "question": "You are tasked with designing a Retrieval-Augmented Generation (RAG) application. Which of the following is not a necessary component to create a functioning RAG application?",
+    "choices": [
+      "A. Retriever",
+      "B. Model Signature",
+      "C. Embedding Model",
+      "D. Pre-trained Tokenizer"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 2,
+    "question": "In the context of evaluating a Retrieval-Augmented Generation (RAG) model using MLflow, which of the following metrics is most appropriate for assessing the model's retrieval component?",
+    "choices": [
+      "A. Precision@K",
+      "B. Perplexity",
+      "C. BLEU score",
+      "D. Cross-Entropy Loss"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 3,
+    "question": "You are building a PyFunc model in Databricks to classify customer support tickets (e.g., technical issue, billing query, or general inquiry). The input is raw text, which needs preprocessing (e.g., removing special characters, lowercasing). After prediction, the output should be post-processed by mapping numeric predictions to human-readable labels. How would you code this workflow?",
+    "choices": [
+      "A. Code preprocessing outside the PyFunc model in a separate script.",
+      "B. Pre-process text in the predict() function and handle post-processing outside of the model.",
+      "C. Perform both pre- and post-processing within the predict() function of the PyFunc model to keep all tasks encapsulated.",
+      "D. Skip pre- and post-processing entirely and rely on raw text inputs and numeric outputs."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 4,
+    "question": "You are a Generative AI engineer at a tech company, responsible for integrating a transformer-based text generation model into an application. The model, trained on Databricks, needs to be deployed as an API service in a scalable, low-latency environment for use by multiple client applications. What is the best approach to ensure scalable deployment and low-latency API access?",
+    "choices": [
+      "A. Use Databricks Delta Live Tables to stream the model predictions in real-time.",
+      "B. Deploy the model as a RESTful API using Databricks Model Serving feature.",
+      "C. Use Databricks Jobs API to schedule model inferences periodically.",
+      "D. Deploy the model in a Databricks Notebook and have clients query the notebook."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 5,
+    "question": "You are building a retrieval-based generative AI system in Databricks using historical customer support chats to assist agents. The LLM has a 2048-token limit, and chat histories vary in length. Some queries require information from multiple chat parts, but retrieval must stay accurate and concise. What is the best chunking strategy for optimal retrieval?",
+    "choices": [
+      "A. Chunk based on speaker turns (each turn is one chunk) with a 10% overlap across turns.",
+      "B. Chunk by topics or subtopics discussed during the chat, with a small overlap between each topic.",
+      "C. Chunk by fixed 512-token segments with no overlap.",
+      "D. Chunk based on fixed time intervals during the chat, with a 50-token overlap."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 6,
+    "question": "You are building a Generative AI application in Databricks using a pre-trained LLM for text generation. The model should generate text based on user input, fine-tune using custom datasets, and be deployed in Databricks. It must be scalable, low-latency, and easy to maintain. Which of the following steps is NOT required?",
+    "choices": [
+      "A. Set up a custom model scoring server outside Databricks to handle real-time predictions and latency issues.",
+      "B. Optimize the model pipeline using distributed processing with Apache Spark during fine-tuning.",
+      "C. Load the pre-trained LLM from a Hugging Face repository using Databricks’ transformers integration.",
+      "D. Leverage Databricks-managed MLflow to track experiments and log model performance."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 7,
+    "question": "Your team deployed a GPT-based chatbot to assist with IT issues, but the accuracy and relevance of responses are decreasing. You need to evaluate the model's performance and establish continuous monitoring in production. What is the best practice for monitoring the model to ensure it meets business requirements over time?",
+    "choices": [
+      "A. Track the BLEU score continuously during production and trigger retraining when it falls below a threshold.",
+      "B. Focus exclusively on tracking user feedback to identify when the model performance degrades.",
+      "C. Use a comprehensive dashboard to monitor multiple evaluation metrics like BLEU, ROUGE, and perplexity, along with user feedback and business KPIs.",
+      "D. Perform regular A/B testing between different versions of the model to identify the best performing version."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 8,
+    "question": "You are developing a generative AI-powered search system for a medical research database with varying document lengths (research papers, clinical trial reports, medical guidelines) and short, direct user queries focused on specific medical terms or treatments. Which embedding model context length should you select to balance accurate search results and performance efficiency?\n",
+    "choices": [
+      "A. 2048 tokens",
+      "B. 1024 tokens",
+      "C. Unlimited tokens",
+      "D. 512 tokens"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 9,
+    "question": "You are developing a multi-lingual product recommendation system for an e-commerce platform operating in multiple countries. After reviewing various models in a marketplace, which one would you choose based on their metadata and model cards?",
+    "choices": [
+      "A. Model A: Pre-trained on product reviews in English, fine-tuned for recommendation systems",
+      "B. Model B: Pre-trained on multilingual news articles, fine-tuned on general classification tasks",
+      "C. Model C: Pre-trained on global e-commerce datasets, fine-tuned for recommendation systems with multi-lingual support",
+      "D. Model D: Pre-trained on legal documents from multiple languages, fine-tuned for sentiment analysis"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 10,
+    "question": "You are preparing a set of internal technical documentation to be used as the knowledge base for a Retrieval-Augmented Generation (RAG) chatbot that helps support engineers troubleshoot issues. Which of the following content should you filter out to ensure high-quality retrieval and generation?",
+    "choices": [
+      "A. Code snippets that illustrate how to fix issues",
+      "B. Navigation headers and footers repeated across all pages",
+      "C. Root-cause explanations written in technical detail",
+      "D. Structured step-by-step resolution procedures"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 11,
+    "question": "You are working with a pyfunc model in Databricks, which uses pre-processing to transform raw text input into tokenized form, applies a generative model for text generation, and then applies post-processing to clean up the generated text. How should you modify the predict method to correctly handle pre- and post-processing in a pyfunc model?",
+    "choices": [
+      "A. Implement the pre-processing in the load_context method, leaving predict to handle inference.",
+      "B. Use the predict method to handle both pre-processing and post-processing, along with the actual model inference.",
+      "C. Write the pre-processing as a Spark UDF inside the predict method and handle post-processing externally.",
+      "D. Only include the pre-processing logic in predict since post-processing is not supported."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 12,
+    "question": "You are tasked with designing a prompt that will make a Generative AI model return a two-sentence response for each user query, structured as follows:\nA concise answer to the question.\nA follow-up recommendation or suggestion related to the query.\nWhich of the following prompts will most reliably generate a response that meets these specific criteria?\n",
+    "choices": [
+      "A. \"Answer this question, and then give a suggestion or a tip related to it in less than two lines.\"",
+      "B. \"Answer the question in one sentence, followed by another sentence with a related recommendation.\"",
+      "C. \"Please answer the following question concisely and then provide a suggestion in a separate sentence.\"",
+      "D. \"Respond to the question briefly, and give one suggestion, keeping your answer under 3 sentences.\""
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 13,
+    "question": "You are optimizing a cost-effective Retrieval-Augmented Generation (RAG) system on Databricks, where large-scale LLM inference for many users has become costly. You aim to reduce costs while maintaining high request volumes using Databricks-native capabilities, including feature stores. Which strategy would most effectively lower LLM usage costs in your Databricks RAG application?",
+    "choices": [
+      "A. Store retrieved documents in Databricks Feature Store, which will allow re-use of document embeddings, reducing the number of calls to the LLM.",
+      "B. Utilize Databricks FileStore to store and cache frequently used responses.",
+      "C. Enable cluster auto-termination in Databricks to shut down the LLM inference cluster after inactivity.",
+      "D. Increase the timeout for LLM responses so that fewer resources are used during peak traffic."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 14,
+    "question": "You deployed a Retrieval-Augmented Generation (RAG) application with an open-source LLM and a vector database for document retrieval. You want to use MLflow to monitor and evaluate the model's performance, focusing on response quality and tracking model drift. Which method is MOST effective for evaluating and monitoring your RAG application's performance with MLflow?",
+    "choices": [
+      "A. Implement custom evaluation metrics such as BLEU or ROUGE scores for generated responses and log them to MLflow.",
+      "B. RAG applications cannot be effectively evaluated or monitored using MLflow.",
+      "C. Use MLflow's built-in model signature feature to automatically log and compare schemas.",
+      "D. Leverage MLflow's model registry to monitor model drift without logging performance metrics."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 15,
+    "question": "You are developing a customer-facing virtual assistant using an LLM for a banking app. To protect sensitive financial data, you need to implement guardrails that prevent the model from offering inaccurate financial advice or legal recommendations. Which guardrail is most effective in keeping the model within its intended scope?",
+    "choices": [
+      "A. Use an explicit instruction in the prompt to avoid legal and financial advice.",
+      "B. Disable the model's ability to respond to any user queries related to finance or law.",
+      "C. Rely on the model’s pre-trained knowledge to avoid generating inappropriate content.",
+      "D. Limit the length of the LLM's responses to reduce the chance of inappropriate content."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 16,
+    "question": "You are developing an AI system for an e-commerce company to provide personalized product recommendations using multi-stage reasoning. The stages include gathering user preferences, analyzing browsing history, and recommending products. Which tools best define and order the process for gathering knowledge and making decisions in this multi-stage pipeline?",
+    "choices": [
+      "A. Tool 1: Data ingestion tool (activity) → Tool 2: NLP tool (reviews) → Tool 3: Recommendation engine",
+      "B. Tool 1: Data collection (behavior) → Tool 2: Reinforcement learning (interactions) → Tool 3: Collaborative filtering",
+      "C. Tool 1: Web scraping (real-time) → Tool 2: Neural network (purchases) → Tool 3: Statistical analysis",
+      "D. Tool 1: Sentiment analysis (feedback) → Tool 2: K-means clustering (segmentation) → Tool 3: Logistic regression"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 17,
+    "question": "You are running an LLM-based RAG system on Databricks that retrieves documents from a large knowledge base and generates responses based on them. To minimize costs without sacrificing too much performance, which of the following strategies should you implement using Databricks features?",
+    "choices": [
+      "A. Leverage Databricks Repos to manage code efficiently",
+      "B. Set up preemptible instances for inference workloads",
+      "C. Use Photon for accelerated query execution",
+      "D. Use Job Clusters instead of All-purpose Clusters"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 18,
+    "question": "In which way does altering the tone or style of a prompt affect the output of a generative AI model like GPT-4 when generating marketing copy for an application?",
+    "choices": [
+      "A. Altering the style of the prompt will only affect the length of the output, without impacting the content or quality.",
+      "B. A prompt written in a formal tone will always produce better results, regardless of the target audience or context.",
+      "C. Changing the tone of the prompt has no effect because generative AI models focus solely on factual content.",
+      "D. Modifying the tone of the prompt can guide the model to produce outputs that match the desired emotional or stylistic elements."
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 19,
+    "question": "You are designing a prompt for an AI system that generates monthly financial reports. The report must follow this specific format:\nMonth: [Month name]\nRevenue: $[Total revenue]\nExpenses: $[Total expenses]\nProfit: $[Revenue - Expenses]\nNotes: [Relevant notes on financial performance]\nWhich of the following prompts is most likely to generate the correct and consistently formatted response?\n",
+    "choices": [
+      "A. \"Give me a financial summary including revenue, expenses, and profit.\"",
+      "B. \"Generate a financial report for this month, including revenue, expenses, profit, and additional notes.\"",
+      "C. \"Summarize the monthly financial data, ensuring you include all necessary information like revenue, expenses, profit, and any notes on the financial performance.\"",
+      "D. \"Create a report for this month's finances in the following format: Month: [Month name], Revenue: $[Total revenue], Expenses: $[Total expenses], Profit: $[Revenue - Expenses], Notes: [Relevant notes on financial performance].\""
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 20,
+    "question": "You are building a question-answering system using embeddings to retrieve answers from technical documentation of varying lengths, with short queries. How do you select the context length for your embedding model to balance document coverage and query accuracy?",
+    "choices": [
+      "A. Set the context length equal to the shortest document to ensure processing efficiency.",
+      "B. Use a context length that captures the most relevant section of longer documents without embedding the entire document.",
+      "C. Use a context length slightly longer than the average FAQ length.",
+      "D. Select a context length based on the longest product manual to ensure all documents are fully embedded."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 21,
+    "question": "You are developing a generative AI-powered RAG system for a legal firm to help attorneys retrieve and generate text from a large corpus of legal documents. Some documents contain irrelevant metadata (e.g., page numbers, table of contents, footnotes), which could degrade output quality. What is the best data preparation step to filter extraneous content and ensure high-quality output?",
+    "choices": [
+      "A. Use regular expressions to identify and remove document structures like page numbers, headers, and footnotes from the corpus.",
+      "B. Leave the documents in their original form, as the model can learn to ignore irrelevant metadata.",
+      "C. Convert all documents to lowercase and remove punctuation to simplify the text.",
+      "D. Remove all text data that does not begin with a legal term."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 22,
+    "question": "A Databricks team is experimenting with different chunking strategies for documents in a RAG pipeline. They want to understand whether a new strategy improves the relevance of top-5 retrieved chunks. Which of the following would be most helpful for evaluating this?",
+    "choices": [
+      "A. Manual relevance grading by annotators on retrieved chunks",
+      "B. Measuring exact match score of retrieval chunks",
+      "C. Tracking GPU memory consumption during training",
+      "D. Counting the number of tokens in the model’s final output"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 23,
+    "question": "You are developing a question-answering system that retrieves data from multiple documents and generates answers based on the context of the documents. Which of the following tools or frameworks is best suited for implementing this type of generative AI application using a combination of language models and retrieval-augmented generation?",
+    "choices": [
+      "A. Langchain",
+      "B. PyTorch",
+      "C. Hugging Face Transformers",
+      "D. TensorFlow"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 24,
+    "question": "You are designing a Generative AI agent in Databricks that uses tools to query a customer database and summarize results. You want to build a prompt template that guides the LLM to choose from available functions like get_customer_orders, get_customer_profile, and get_customer_feedback. What is the most appropriate way to expose these functions in the prompt template?",
+    "choices": [
+      "A. Describe the database schema instead of exposing the functions directly",
+      "B. List each function’s name and natural-language description, and clearly format the function call instructions in the prompt",
+      "C. Add all Python function code to the prompt to provide full transparency",
+      "D. Omit the function names to avoid overloading the model with too much information"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 25,
+    "question": "Your team is building a RAG-based chatbot that pulls information from a large, dynamic dataset. Some portions of the dataset contain outdated and offensive language, which needs to be addressed before being used for retrieval. What is the most scalable and efficient method to mitigate problematic text in this context?\n",
+    "choices": [
+      "A. Use regular expressions to identify and replace offensive words in the dataset before ingestion into the RAG pipeline.",
+      "B. Set up a content moderation system using third-party APIs to manually inspect and remove harmful text from the dataset.",
+      "C. Implement a transformer-based language model pre-trained for toxicity detection, filtering text dynamically during the retrieval phase.",
+      "D. Exclude entire documents from the retrieval corpus if they contain any instances of offensive language, ensuring no problematic content is pulled by the RAG model."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 26,
+    "question": "You are tasked with deploying a large language model (LLM) application that uses Foundation Model APIs for language understanding and generation tasks. You have completed the development of your application and need to serve it to end users. Which of the following steps correctly identifies how to serve this LLM application using Foundation Model APIs?",
+    "choices": [
+      "A. Convert the LLM into ONNX format and deploy it on an inference server.",
+      "B. Package the LLM into a Docker container and deploy it on a Kubernetes cluster.",
+      "C. Fine-tune the LLM locally and serve it using Databricks model serving features.",
+      "D. Connect to the Foundation Model API during runtime to avoid managing model infrastructure."
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 27,
+    "question": "You are designing a RAG-based application using Mosaic AI Vector Search on Databricks. Which of the following best describes the role of the Vector Index in the architecture?",
+    "choices": [
+      "A. It transforms raw documents into embeddings using a foundation model",
+      "B. It stores and organizes vector embeddings to enable similarity-based retrieval",
+      "C. It replaces the retriever and orchestrator by directly generating answers to queries",
+      "D. It controls which foundation model is used for final response generation"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 28,
+    "question": "Your team is tasked with ensuring data governance while maintaining query performance for an application that involves real-time analytics on sensitive user data. Which of the following strategies best implements data masking techniques to optimize both governance and performance in Databricks?",
+    "choices": [
+      "A. Implement dynamic masking at the view level and cache frequently queried results to avoid unnecessary masking operations for each query.",
+      "B. Use a combination of column-level encryption and static masking to ensure sensitive information is always hidden, reducing governance overhead.",
+      "C. Mask data at the storage layer and configure the system to remove sensitive information before loading into Databricks.",
+      "D. Use query-level dynamic masking to ensure that data is masked every time a user issues a query on the sensitive dataset."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 29,
+    "question": "Which of the following correctly sequences the steps for deploying an endpoint for a basic Retrieval-Augmented Generation (RAG) application on Databricks?",
+    "choices": [
+      "A. Train the language model → Develop the retrieval function → Deploy the retrieval function → Package the application → Register the model with MLflow → Deploy the endpoint",
+      "B. Develop the retrieval function → Train the language model → Package the application → Register the model with MLflow → Deploy the endpoint",
+      "C. Develop the retrieval function → Train the language model → Package the application → Register the model with Unity Catalog → Deploy the endpoint",
+      "D. Develop the retrieval function → Train the language model → Package the application → Deploy the endpoint → Register the model with MLflow"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 30,
+    "question": "You have created a Vector Search index on a Delta table containing embeddings of product descriptions. You now want to query this index using a user query string to retrieve semantically similar documents. Which approach is most appropriate for executing the query?",
+    "choices": [
+      "A. Use a standard SQL SELECT query with a LIKE clause on the Delta table.",
+      "B. Perform a full table scan and compare embeddings in a UDF loop.",
+      "C. Call the Vector Search index endpoint using the Databricks REST API or LangChain integration.",
+      "D. Use the vectorsearch.index() API with the query text and embedding model."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 31,
+    "question": "A financial services company wants to develop an AI pipeline to detect fraudulent credit card transactions in real-time, using data like transaction amount, location, time, merchant category, and customer spending history. The goal is to minimize false positives while accurately flagging fraudulent transactions. Which best describes the desired inputs and outputs for this AI pipeline?",
+    "choices": [
+      "A. Input: Transaction amount, location, and customer demographics. Output: Clustered transactions based on spending patterns.",
+      "B. Input: Transaction details, customer history, and merchant data. Output: Binary fraud/no fraud classification with probability scores.",
+      "C. Input: Merchant category and transaction time. Output: Anomaly detection on the most frequent transaction times.",
+      "D. Input: Customer demographics and time since last purchase. Output: Prediction of customer credit score changes."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 32,
+    "question": "A large e-commerce company wants to deploy a low-latency Generative AI solution for automated product description generation using a fine-tuned LLM on Databricks. As the lead engineer, you're tasked with designing a cost-effective solution that minimizes inference time. What is the best architecture for this?",
+    "choices": [
+      "A. Use a cluster with the highest number of GPUs available and a custom transformer model.",
+      "B. Use Databricks’ AutoML to handle both training and inference for the LLM.",
+      "C. Implement greedy decoding and optimize model parallelism across multiple GPU nodes.",
+      "D. Apply model quantization and cache frequent outputs to reduce computation overhead."
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 33,
+    "question": "You are building a Retrieval-Augmented Generation (RAG) system to assist financial analysts in querying a large corpus of earnings reports. The system retrieves the top 20 document chunks using dense vector similarity. To improve the relevance of the final context passed to the LLM, you decide to apply a re-ranking step. What is the primary role of re-ranking in this context?",
+    "choices": [
+      "A. To cluster similar chunks to avoid repetition before retrieval",
+      "B. To filter out irrelevant queries before retrieval",
+      "C. To reorder retrieved documents based on relevance using a more precise scoring model, often an LLM",
+      "D. To increase the number of documents retrieved from the vector store"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 34,
+    "question": "You need to implement a masking strategy in Databricks for a customer database containing sensitive data like credit card and social security numbers. The goal is to mask sensitive data while ensuring optimal query performance. Which of the following options could be part of your solution?&nbsp;",
+    "choices": [
+      "A. Implement a custom UDF (User-Defined Function) for data masking logic",
+      "B. Apply HASH-based Masking using Databricks SQL",
+      "C. Use RLS (Row-Level Security) instead of masking for sensitive data protection",
+      "D. Use Dynamic Views with Column-Level Masking"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 35,
+    "question": "You are training a Generative AI model to assist users with booking flights. Which of the following prompt/response pairs aligns most closely with the flight booking task?",
+    "choices": [
+      "A. Prompt: \"What are the best places to visit in Europe?\" → Response: \"Paris, Rome, and London are some of the most popular tourist destinations in Europe.\"",
+      "B. Prompt: \"Can you describe the process of airplane maintenance?\" → Response: \"Airplane maintenance involves regular inspections, cleaning, and repairs...\"",
+      "C. Prompt: \"How can I book a flight?\" → Response: \"You can book a flight by visiting our website, selecting your destination, and following the checkout process.\"",
+      "D. Prompt: \"Tell me a fun fact about airplanes.\" → Response: \"Did you know that the longest commercial flight in the world lasts over 18 hours?\""
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 36,
+    "question": "You are working with a large legal document containing thousands of pages. The task is to chunk the document for fine-tuning a language model with a 4096-token limit. The document has sections, subsections, paragraphs, and bullet points. Your goal is to preserve logical flow and context within each chunk while staying within the token limit. Which chunking strategy is most appropriate?\n",
+    "choices": [
+      "A. Chunk by sections and subsections, then truncate chunks to fit within the 4096-token limit.",
+      "B. Chunk by splitting at the token limit, without considering the document structure.",
+      "C. Chunk by paragraphs, but add overlapping context between chunks to maintain continuity.",
+      "D. Chunk by sections, ensuring that no chunk exceeds 4096 tokens, even if it means splitting a section."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 37,
+    "question": "A data team is responsible for monitoring the performance of a deployed Retrieval-Augmented Generation (RAG) application. They plan to use inference logging to identify model drift, performance degradation, and potential bias. What should the team monitor and log to achieve their goals effectively?",
+    "choices": [
+      "A. Log the time taken for retrieval and response generation to detect potential latency issues.",
+      "B. Log the frequency of user queries to detect a spike in demand.",
+      "C. Log the difference between retrieved documents and generated responses to measure how much the model relies on retrieval versus generation.",
+      "D. Log the generated response and compare it against the original prompt to check for drift over time."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 38,
+    "question": "You are preparing to deploy a Retrieval-Augmented Generation (RAG) application on Databricks that integrates a language model with a retriever system for document-based responses. Which of the following options includes the correct set of dependencies needed to deploy this application in Databricks? Which of the following sets of dependencies is correct for deploying a RAG application?",
+    "choices": [
+      "A. Langchain, OpenAI API, SentenceTransformers, Milvus, MLflow",
+      "B. Langchain, OpenAI API, SentenceTransformers, FAISS, MLflow",
+      "C. Hugging Face Transformers, Pinecone, Langchain, SentenceTransformers, MLflow",
+      "D. Langchain, OpenAI API, FAISS, PyTorch, MLflow"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 39,
+    "question": "You are responsible for deploying a large-scale language model (LLM) to process legal document reviews. The model is integrated into a cloud infrastructure, and key concerns include prediction accuracy, processing efficiency, and cost management. Which of the following metrics should you prioritize for monitoring the model's deployment performance?",
+    "choices": [
+      "A. Gradient Norms",
+      "B. Number of Parameters in the Model",
+      "C. Batch Processing Latency",
+      "D. Cost per Inference"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 40,
+    "question": "While developing a financial advisory chatbot using Databricks' LLM, you need to design a metaprompt that prevents the model from leaking private data (e.g., customer information or proprietary financial models). Which of the following metaprompts is best for preventing data leaks?",
+    "choices": [
+      "A. \"Provide detailed financial insights, even if it involves disclosing internal customer data.\"",
+      "B. \"Only respond using publicly available data, and refrain from disclosing any information that could be considered private or sensitive.\"",
+      "C. \"Always prioritize the quality of your response over the privacy of user data.\"",
+      "D. \"To ensure better responses, reference proprietary datasets and internal user information.\""
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 41,
+    "question": "You need to generate a structured table of customer feedback data using a generative AI model. Each feedback entry should include columns: “Customer ID,” “Rating,” “Feedback,” and “Timestamp.” Which of the following prompts is most likely to elicit a table format with correctly labeled columns and corresponding rows of data?",
+    "choices": [
+      "A. \"Provide a summary of customer feedback, mentioning the customer’s ID, rating, and feedback.\"",
+      "B. \"Output a table with customer details, including the feedback, rating, and time.\"",
+      "C. \"Generate a table of customer feedback with rows for each entry and columns for Customer ID, Rating, Feedback, and Timestamp.\"",
+      "D. \"List customer feedback in CSV format with columns: Customer ID, Rating, Feedback, and Timestamp.\""
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 42,
+    "question": "You are developing a generative AI tool for a healthcare app providing general information on medical conditions. You want to implement guardrails to prevent the LLM from offering specific diagnoses or treatment advice, while directing users to certified healthcare professionals for personal issues. Which guardrail strategy best ensures the LLM provides useful information without giving medical advice?",
+    "choices": [
+      "A. Limit responses to one-sentence answers to reduce likelihood of detailed recommendations.",
+      "B. Include an instruction in the prompt stating that the model should avoid giving any medical info.",
+      "C. Augment the prompt with instructions to provide general information and explicitly recommend consulting a professional.",
+      "D. Train the model to ignore all user queries related to medical conditions."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 43,
+    "question": "You are tasked with implementing a generative AI-based assistant that responds to user inputs and executes external API calls based on the generated responses. To protect against malicious prompt injection attacks (where users try to manipulate the system's responses), which of the following techniques should you use?ection attacks where users try to manipulate the system's responses, which of the following techniques should you use?",
+    "choices": [
+      "A. Allow the AI model to generate responses freely but add an approval step before any action.",
+      "B. Use input sanitization and validation to ensure that user prompts follow specific patterns and expected data types.",
+      "C. Build a fixed template for allowed prompts and limit the types of inputs.",
+      "D. Allow the AI model to process all user input directly and filter responses after they have been generated."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 44,
+    "question": "You are working on a project where a large language model (LLM) is integrated into a customer service chatbot. The model has been live for months, and you're concerned about potential model drift due to changes in customer behavior and language patterns. To ensure consistent performance, you plan to implement a process to monitor the model for drift. Which approach would be most effective for this?",
+    "choices": [
+      "A. Monitor changes in the input data distribution by regularly comparing new user inputs to the distribution in the original training set.",
+      "B. Monitor the accuracy of the model predictions on a monthly basis using the original training data.",
+      "C. Use a synthetic dataset to simulate user behavior over time and evaluate the model monthly.",
+      "D. Periodically retrain the model with new data without monitoring input or output changes."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 45,
+    "question": "You are tasked with implementing data masking in a multi-tier access control system, where users have varying levels of visibility into sensitive data (e.g., full, partial, or no access). Performance must remain stable, as queries on the data lakehouse are critical. Which strategy best achieves this?",
+    "choices": [
+      "A. Store fully masked, partially masked, and unmasked versions of each table and assign access by role.",
+      "B. Use dynamic SQL to create role-based queries that return different masked data versions for each role.",
+      "C. Use role-based masking policies via Unity Catalog to apply specific masking levels based on user roles.",
+      "D. Implement a single masking policy at the table level, masking all sensitive data for all roles equally."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 46,
+    "question": "Your company uses Databricks to analyze customer purchasing patterns and handle sensitive data like credit card numbers. You need a masking strategy where unauthorized users see only the last four digits, while authorized users see the full number, without impacting query performance on large datasets. Which data masking strategy would best meet these objectives?",
+    "choices": [
+      "A. Apply external tokenization to replace sensitive data with random tokens",
+      "B. Create a view that masks credit card numbers using conditional SQL statements",
+      "C. Use row-level security combined with dynamic masking policies in Unity Catalog",
+      "D. Obfuscate sensitive fields by hashing them with a cryptographic hash function"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 47,
+    "question": "You are developing a generative AI application for customer support agents to draft email responses. The model, trained on a large dataset, may inadvertently generate sensitive information (e.g., credit card details, personal IDs, passwords). To prevent legal and privacy issues, what is the best approach to ensure the model doesn't include sensitive data in its outputs?",
+    "choices": [
+      "A. Implement a post-processing filter to detect and remove sensitive information from the model’s outputs.",
+      "B. Manually monitor all model outputs for sensitive information before sending them to the users.",
+      "C. Use prompt engineering techniques to explicitly ask the model not to include any sensitive information.",
+      "D. Fine-tune the model on a dataset that includes examples of sensitive information with negative constraints."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 48,
+    "question": "You are building a Generative AI system that retrieves relevant document sections and generates responses. The system needs to split documents into chunks for efficient retrieval and processing, considering semantic similarity. The generative model has a 4096-token limit. Which chunking strategy maximizes retrieval accuracy and ensures the model handles the input size?",
+    "choices": [
+      "A. Split documents into fixed-size chunks of 500 tokens each, regardless of document structure",
+      "B. Split documents into very small chunks of 100 tokens each to ensure retrieval is specific",
+      "C. Split documents into large chunks of up to 4000 tokens to maximize information retrieval",
+      "D. Split documents into sections based on natural boundaries (e.g., paragraphs or sections) while ensuring each chunk stays below 2048 tokens"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 49,
+    "question": "You are developing a Retrieval-Augmented Generation (RAG) system that uses data from both proprietary and publicly licensed sources. What is the best strategy to ensure that your system adheres to legal and licensing obligations when using these data sources?",
+    "choices": [
+      "A. Include a disclaimer stating the use of data is for educational purposes only.",
+      "B. Confirm that each data source’s license explicitly allows for the intended use of the data, including commercial and non-commercial applications.",
+      "C. Remove proprietary data from your system, but retain open-source datasets.",
+      "D. Use all data freely, assuming that AI outputs do not directly copy from training data."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 50,
+    "question": "You are designing a Retrieval-Augmented Generation (RAG) application using Databricks. Your goal is to optimize the performance and scalability of feature serving. Which of the following resources is most critical for efficiently serving precomputed features to the application?",
+    "choices": [
+      "A. Feature Store with online serving enabled",
+      "B. Unity Catalog for feature retrieval",
+      "C. Delta Live Tables (DLT) pipelines",
+      "D. Databricks Repos for versioning feature transformations"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 51,
+    "question": "You are selecting an LLM for an enterprise-level customer service chatbot to handle complex queries with real-time, accurate responses. The evaluation criteria include latency, model size, token generation speed, and perplexity. Which LLM configuration best balances accuracy, latency, and response quality for real-time customer service?",
+    "choices": [
+      "A. A 1-billion parameter transformer model with high perplexity and very low latency.",
+      "B. A 6-billion parameter transformer model with low perplexity and medium latency.",
+      "C. A 2-billion parameter transformer model with low perplexity and high latency.",
+      "D. A 175-billion parameter transformer model with very low perplexity but extremely high latency."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 52,
+    "question": "You are tasked with deploying a fine-tuned LLM model using Databricks Model Serving to provide real-time responses for a customer service chatbot. The chatbot needs to handle a high volume of requests concurrently, with each request requiring a quick, low-latency response. Which configuration in Databricks Model Serving is most appropriate for this use case?",
+    "choices": [
+      "A. Manually scale the serving cluster to maximum size and keep it always on.",
+      "B. Configure autoscaling for the model-serving cluster to dynamically adjust resources based on request load.",
+      "C. Enable batch inference with Databricks Jobs to handle large volumes of requests at once.",
+      "D. Deploy the model on a smaller interactive cluster to reduce the cost of model serving."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  }
+]

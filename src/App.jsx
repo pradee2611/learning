@@ -3,6 +3,8 @@ import FileUpload from './components/FileUpload'
 import StudyMode from './components/StudyMode'
 import ExamMode from './components/ExamMode'
 import databrickDump from './data/databrickDump.json'
+import databrickMock2 from './data/DatabrickMock2.json'
+import databrickMock3 from './data/databrickMock3.json'
 import './App.css'
 
 function App() {
@@ -16,7 +18,9 @@ function App() {
   useEffect(() => {
     // Combine all question sets
     const allQuestionSets = [
-      { data: databrickDump, source: 'Databricks Dump', key: 'dump' }
+      { data: databrickDump, source: 'Databricks Dump', key: 'dump' },
+      { data: databrickMock2, source: 'Databricks Mock 2', key: 'mock2' },
+      { data: databrickMock3, source: 'Databricks Mock 3', key: 'mock3' }
     ]
 
     // Store question set metadata

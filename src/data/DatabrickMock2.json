@@ -1,0 +1,614 @@
+[
+  {
+    "question_number": 1,
+    "question": "You are building a system that takes in structured data, such as a CSV file with sales figures, and generates a natural language report summarizing the data, highlighting key trends, and making comparisons. Which combination of chain components would be most appropriate for this system?",
+    "choices": [
+      "A. Data-to-text generation model followed by a text summarization model",
+      "B. NER model followed by a text classification model",
+      "C. Structured data parser followed by a text generation model (e.g., GPT-based)",
+      "D. Sequence-to-sequence model followed by a dense passage retriever"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 2,
+    "question": "You are designing a Generative AI chatbot for customer service and need to ensure resilience against malicious inputs, such as harmful code or offensive language. Which guardrail technique would be most effective to prevent such inputs?",
+    "choices": [
+      "A. Limit the length of the input text to reduce the chances of malicious inputs.",
+      "B. Implement input validation techniques, including regular expression (regex) patterns to only allow predefined characters.",
+      "C. Integrate real-time content moderation powered by AI that dynamically flags potentially harmful content.",
+      "D. Use basic text filtering to block specific offensive words and phrases."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 3,
+    "question": "In the context of a RAG application, a company discovers that a portion of the data feeding the application contains offensive language and biased statements. Which of the following approaches best addresses governance concerns by mitigating this problematic content without significantly altering the factual integrity of the dataset?",
+    "choices": [
+      "A. Exclude the entire dataset from the model training to ensure no inappropriate data is used.",
+      "B. Apply Natural Language Processing (NLP) techniques to summarize the offensive parts of the text and remove those sections.",
+      "C. Implement content moderation tools that flag and transform inappropriate data into non-offensive, neutral text.",
+      "D. Use fine-tuning to train the model on acceptable content, ensuring the problematic data is ignored."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 4,
+    "question": "Which of the following is the correct set of resources needed to serve features for a Retrieval-Augmented Generation (RAG) application in Databricks?",
+    "choices": [
+      "A. A trained language model, a vector search index, a pre-built feature store, and a GPU cluster for real-time inference.",
+      "B. A vector search index, a feature store to manage embeddings, pre-processed text data, and a scalable inference cluster.",
+      "C. A distributed GPU cluster for real-time inference, raw text data, a feature store for storing models, and a cloud-based SQL server for querying embeddings.",
+      "D. A fine-tuned LLM, a feature store for text embeddings, a SQL database for storing queries, and a distributed training cluster."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 5,
+    "question": "You are tasked with implementing data masking for a multi-tiered access control system. Users in different roles should have varying visibility into sensitive data fields (e.g., full, partial, or full masking). Performance must remain stable for critical queries against the data lakehouse. Which strategy best accomplishes this?",
+    "choices": [
+      "A. Implement a single masking policy at the table level, masking all sensitive data for all roles equally.",
+      "B. Use role-based masking policies via Unity Catalog to apply specific masking levels based on user roles.",
+      "C. Store fully masked, partially masked, and unmasked versions of each table and assign access by role.",
+      "D. Use dynamic SQL to create role-based queries that return different masked data versions for each role."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 6,
+    "question": "Designing an AI-powered question-answering system involves understanding the user's query, retrieving relevant documents, and generating a coherent, fact-based response. Which sequence of components best satisfies the input (user’s question) and output (fact-based response)?",
+    "choices": [
+      "A. 1. Named Entity Recognition (NER) → 2. Text Summarization → 3. Response Generation",
+      "B. 1. Tokenization → 2. Text Summarization → 3. Response Generation",
+      "C. 1. Document Classification → 2. Embedding Generation → 3. Response Generation",
+      "D. 1. Question Parsing → 2. Information Retrieval → 3. Response Generation"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 7,
+    "question": "You are designing a Generative AI agent that interacts with APIs to retrieve account info, update settings, and send notifications. To ensure the agent uses the APIs correctly, you need to build a prompt template exposing the available functions. Which approach best exposes these functions to the model?",
+    "choices": [
+      "A. Expose all available functions but include short descriptions or signatures of each function for clarity.",
+      "B. Only expose the functions that are most frequently used, to reduce prompt size and improve performance.",
+      "C. Expose the function names but leave out their descriptions to save space in the prompt.",
+      "D. List all available functions in the prompt and provide detailed descriptions of each."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 8,
+    "question": "You are developing a generative AI model to assist with customer service requests. A user submits the query:\n\"I ordered a laptop two weeks ago, but it hasn’t arrived yet. Can you check the status? Also, I need help installing some software on it when it arrives.\" \nWhich approach ensures the AI responds appropriately to both parts of the query?",
+    "choices": [
+      "A. Add additional context about the customer’s purchase date and order status request: \"Check the status of the laptop order placed two weeks ago and help with software installation when it arrives.\"",
+      "B. Use only the first intent: \"Check the status of the laptop order.\"",
+      "C. Use dynamic prompt generation to cycle between possible intents, but process only one intent at a time.",
+      "D. Combine the intents into a single prompt: \"Help with order tracking and software installation.\""
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 9,
+    "question": "You have deployed an LLM to generate content for an internal knowledge base. Your team is tasked with monitoring its performance to ensure the content remains consistent, relevant, and useful. Which key metrics are most important for evaluating the LLM's ability to generate consistent and relevant content?",
+    "choices": [
+      "A. Frequency of specific key terms appearing in generated content.",
+      "B. Perplexity of the model on the training dataset.",
+      "C. Average word embedding similarity between generated articles and original training data.",
+      "D. Rate of factual inaccuracies reported by users in the generated content."
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 10,
+    "question": "You are building a RAG (Retrieval-Augmented Generation) application using a transformer-based LLM with a 4096-token context window. Your evaluation shows high retrieval precision but low recall when using sentence-level chunking. What is the best chunking strategy to improve recall while maintaining context relevance?",
+    "choices": [
+      "A. Use document-level chunking without overlap",
+      "B. Use paragraph-level chunking with sliding window overlap",
+      "C. Use fixed-size token-based chunking with no overlap",
+      "D. Use random chunking to avoid bias toward structured content"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 11,
+    "question": "A Generative AI Engineer is developing a text preprocessing pipeline for an AI-powered knowledge extraction system. The system receives long, unstructured documents containing paragraphs with multiple sentences and needs to break them into individual sentences for easier downstream processing. Which NLP task should the engineer focus on when choosing an appropriate method for splitting text into sentences?",
+    "choices": [
+      "A. Embedding Retrieval",
+      "B. Sentencizer",
+      "C. Summarization",
+      "D. Named Entity Recognition (NER)"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 12,
+    "question": "You are using a RAG application to assist with technical document retrieval for an internal knowledge base. The documents include source code files, logs, comments, and configuration files. Your task is to filter extraneous content to enhance the quality of generated responses. Which of the following filtering strategies would most effectively improve the accuracy of the RAG system?",
+    "choices": [
+      "A. Remove log files, comments, and configuration files that do not directly relate to the current use case, and ensure source code is retained only if it's relevant to the query.",
+      "B. Remove logs and comments, but keep configuration files and source code.",
+      "C. Retain all content, as any part of the document might provide useful context.",
+      "D. Remove all log files, comments, and configuration files, keeping only source code."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 13,
+    "question": "Which of the following describes how LangChain enhances the use of agents in a Generative AI application to handle tasks dynamically?",
+    "choices": [
+      "A. LangChain agents can interact with external tools, APIs, and environments to solve complex tasks.",
+      "B. LangChain agents automatically learn task processes without human input.",
+      "C. LangChain agents replace traditional APIs for better task automation.",
+      "D. LangChain agents directly modify the model architecture to improve decision-making."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 14,
+    "question": "When incorporating third-party datasets into a generative AI model development pipeline, which of the following actions minimizes the legal risks related to data usage?",
+    "choices": [
+      "A. Focusing on anonymizing the data used in the model as the primary approach to avoiding legal issues.",
+      "B. Using only datasets that are clearly labeled as “free” and assuming they can be used for any purpose.",
+      "C. Conducting a thorough audit of each dataset’s licensing terms and ensuring they comply with the intended use cases, including commercialization.",
+      "D. Removing all data source attribution requirements from the final model to avoid any future licensing disputes."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 15,
+    "question": "You deployed a Retrieval-Augmented Generation (RAG) application with an open-source LLM and a vector database. You aim to use MLflow to monitor model performance, focusing on response quality and tracking model drift. Which method would be MOST effective for evaluating and monitoring your RAG application using MLflow?",
+    "choices": [
+      "A. Leverage MLflow's model registry to monitor model drift by comparing versions without performance metrics.",
+      "B. Use MLflow's built-in model signature feature to automatically log and compare data schemas over time.",
+      "C. RAG applications cannot be effectively evaluated or monitored using MLflow.",
+      "D. Implement custom evaluation metrics such as BLEU or ROUGE scores for generated responses and log them to MLflow."
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 16,
+    "question": "You are developing a customer support chatbot for an e-commerce platform using a large language model (LLM). The baseline response is too formal, and you want a friendlier, conversational tone while maintaining professionalism. For example:\n\"I apologize for the inconvenience you have experienced. Please provide additional information to assist you further\"\nHow would you adjust the prompt to make the response more friendly without losing professionalism?\n",
+    "choices": [
+      "A. \"Respond in a professional manner.\"",
+      "B. \"Respond with an informal tone and use casual slang.\"",
+      "C. \"Make the response more friendly and conversational, but keep it professional.\"",
+      "D. \"Respond in a way that is highly technical and formal.\""
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 17,
+    "question": "Your team is embedding product manuals (~2,000 tokens) to power a customer support chatbot. Most user queries are short and precise (under 30 tokens), asking about specific configuration steps or settings. Which embedding model context length offers the best balance of relevance and efficiency?",
+    "choices": [
+      "A. 4,096-token context length, combined with windowed queries padded to match length",
+      "B. 8,192-token context length, to ensure full documents are embedded in a single pass",
+      "C. 512-token context length, with tight chunking and focused retrieval",
+      "D. 128-token context length to minimize latency and cost"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 18,
+    "question": "A generative AI model using retrieval-augmented generation (RAG) consistently retrieves too many irrelevant documents during the generation process, leading to poor output quality. Which of the following tools or techniques would most effectively help you diagnose and improve retrieval performance?",
+    "choices": [
+      "A. Loss function analysis",
+      "B. Mean Reciprocal Rank (MRR)",
+      "C. ROC Curve",
+      "D. TF-IDF (Term Frequency-Inverse Document Frequency)"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 19,
+    "question": "You have deployed a RAG-based question-answering system for an internal knowledge base. To assess the quality of the system’s performance over time, you are using inference logging in MLflow. You want to focus on measuring the relevance and coherence of the generated responses. What is the most appropriate method for evaluating these qualities using inference logs?",
+    "choices": [
+      "A. Use inference logs to track model training loss on a validation set",
+      "B. Implement human-in-the-loop feedback to annotate relevance and use those annotations in conjunction with inference logs",
+      "C. Track the query-to-response word count ratio from inference logs",
+      "D. Compare the retrieval recall over time based on inference logs"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 20,
+    "question": "You are designing a real-time recommendation engine for a retail website that provides personalized product suggestions based on users' browsing and purchasing history. The system must handle cold-start users and scale for millions of daily visitors. Which model task best fulfills these requirements?",
+    "choices": [
+      "A. Clustering users based on demographics and behavioral patterns.",
+      "B. Content-based filtering using product attributes.",
+      "C. Hybrid recommendation system combining collaborative filtering and content-based filtering.",
+      "D. Collaborative filtering based on user interaction history."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 21,
+    "question": "You are building a Databricks application using a generative AI model to summarize financial reports. The quarterly earnings report includes key metrics like revenue, expenses, profit margins, and projections. You want a concise yet comprehensive summary. Which prompt structure will best achieve this?",
+    "choices": [
+      "A. Prompt: \"Summarize the quarterly earnings report in two sentences, focusing on the company's financial performance.\"",
+      "B. Prompt: \"What are the key highlights from the company's latest quarterly earnings report?\"",
+      "C. Prompt: \"Explain the company's overall performance in the last quarter.\"",
+      "D. Prompt: \"Give a high-level overview of the company's performance.\""
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 22,
+    "question": "A technical document has sections with detailed tables, charts, and text-heavy explanations. The generative AI model has a token limit of 1024, and sections range from 800 to 3000 tokens. How would you apply a chunking strategy to process the document while maintaining context for coherent answers?",
+    "choices": [
+      "A. Chunk each section individually and truncate any section that exceeds 1024 tokens.",
+      "B. Reformat the entire document into text-only data and chunk the reformatted version into 1024-token blocks without considering original section boundaries.",
+      "C. Apply recursive chunking where you split large sections into smaller chunks that do not exceed 1024 tokens and ensure each chunk has overlapping content with the previous one.",
+      "D. Split each section into chunks of 1024 tokens, ensuring that content within tables and charts is excluded from chunking to prioritize text."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 23,
+    "question": "A Generative AI Engineer is developing an application that processes customer support emails. The application should extract the key issue from each email and present it as a single concise phrase that captures the customer’s primary concern. Which NLP task category should the engineer focus on when selecting a suitable LLM?",
+    "choices": [
+      "A. Machine Translation",
+      "B. Text Classification",
+      "C. Named Entity Recognition (NER)",
+      "D. Text Summarization"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 24,
+    "question": "You are monitoring a RAG application in production and enable inference logging to track metrics like latency, accuracy, and retrieval quality. After analyzing the logs, you notice slow response times and irrelevant document retrieval for certain queries. Which inference logging metric would help diagnose these issues?",
+    "choices": [
+      "A. Query length distribution.",
+      "B. Document embedding similarity score.",
+      "C. Total number of tokens generated per query.",
+      "D. Cache hit ratio for frequently retrieved documents."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 25,
+    "question": "Your company uses Databricks to manage large datasets across departments like marketing, finance, and operations. You need to ensure each department only accesses its own data, preventing cross-departmental leakage, while minimizing permission management overhead. What approach should you use to manage this multi-departmental data access with reduced complexity?",
+    "choices": [
+      "A. Set up Unity Catalog with data lineage and role-based access control (RBAC)",
+      "B. Use workspace-level permissions to restrict access",
+      "C. Create separate workspaces for each department",
+      "D. Assign cluster-level permissions based on department"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 26,
+    "question": "You are designing a Generative AI application that leverages a fine-tuned LLM on Databricks. The application is expected to generate product recommendations based on customer feedback data. What is the most efficient approach to managing the data pipeline for real-time inference while keeping costs under control?",
+    "choices": [
+      "A. Leverage Databricks Feature Store to store processed feedback data and trigger model inference only when relevant features change.",
+      "B. Store customer feedback in MongoDB and create a custom Databricks connector to read and infer data whenever needed.",
+      "C. Use Auto Loader to ingest customer feedback data in real-time and continuously trigger model inference on all incoming data.",
+      "D. Store feedback data in Delta Lake and use Databricks Jobs to periodically run inference on the accumulated feedback."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 27,
+    "question": "In a Retrieval-Augmented Generation (RAG) system, the data source contains sensitive or inappropriate information. You must recommend a strategy to ensure governance and compliance without compromising system performance. Which strategy best addresses this?",
+    "choices": [
+      "A. Develop a custom rule-based filtering mechanism that scans for specific words and phrases.",
+      "B. Implement a hybrid approach that combines text classification with a human review process for flagged sections.",
+      "C. Introduce a human-in-the-loop review system for all retrieved documents before they are fed into the generation model.",
+      "D. Use content moderation techniques like keyword blocking to prevent sensitive or inappropriate text from being indexed."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 28,
+    "question": "You are tasked with securing a Databricks model serving endpoint in an enterprise environment where different teams access models with varying levels of privilege. You decide to use AWS Identity and Access Management (IAM) roles for access control. Which of the following approaches best ensures that only authorized users can access the model serving endpoint?",
+    "choices": [
+      "A. Configure IAM policies in Databricks that deny access unless the request originates from an authorized Databricks-managed VPC.",
+      "B. Use fine-grained IAM policies to control which AWS users can invoke the model serving endpoint and implement IAM role assumption.",
+      "C. Grant Databricks access to AWS KMS keys, ensuring each model request is encrypted and decryption is restricted.",
+      "D. Create an IAM user for each individual who needs access and control access by assigning permissions directly."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 29,
+    "question": "You have created a vector search index on a Delta Lake table with text document embeddings. After embedding a user-provided query into a vector, which option correctly describes how to query the index for the most relevant documents in Databricks?",
+    "choices": [
+      "A. Call the VECTOR_SEARCH function in Databricks SQL to perform the query using the pre-computed vector index.",
+      "B. Use the dbutils.vector.query() method to submit the query vector and return results from the Delta Lake table.",
+      "C. Use a standard SQL SELECT query with a WHERE clause, comparing embeddings using cosine similarity.",
+      "D. Apply the mlflow.search_model() function to query the most similar vector embeddings in the index."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 30,
+    "question": "You are developing a Retrieval-Augmented Generation (RAG) application combining a language model and a knowledge database. During testing, you find biased language, outdated medical advice, and conflicting opinions in the database. Which method is most effective to mitigate this content before training the RAG model?",
+    "choices": [
+      "A. Apply keyword filtering to exclude specific terms related to sensitive topics from being included in the training data.",
+      "B. Remove any content that contains subjective language and replace it with automatically generated, neutral text.",
+      "C. Use entity recognition to detect and remove names of sensitive groups or controversial figures.",
+      "D. Train a bias-detection model to identify and flag problematic text, followed by human review."
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 31,
+    "question": "Which of the following is the primary advantage of using LangChain for managing the interaction between a large language model (LLM) and external data sources in a Generative AI application?",
+    "choices": [
+      "A. LangChain automatically trains the model on new data sources.",
+      "B. LangChain provides a framework for managing the flow of data between LLMs and external systems.",
+      "C. LangChain can integrate with any pre-trained model, regardless of its architecture.",
+      "D. LangChain stores all conversation data within the model for better performance."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 32,
+    "question": "You are fine-tuning a generative AI model in Databricks for sentiment analysis to classify text inputs (reviews) into positive, negative, or neutral categories. Identify the prompt/response pairs that align with this task, as some might be more suitable for other NLP tasks, and responses must reflect sentiment. Which of the following pairs best aligns with sentiment analysis?",
+    "choices": [
+      "A. Prompt: \"I absolutely love this product!\" → Response: \"Sentiment: Positive.\"",
+      "B. Prompt: \"I don’t think this movie was worth the hype.\" → Response: \"Sentiment: Neutral.\"",
+      "C. Prompt: \"Generate a creative description of a sunset.\" → Response: \"The sun dipped below the horizon...\"",
+      "D. Prompt: \"What is the capital of France?\" → Response: \"The capital of France is Paris.\""
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 33,
+    "question": "You are tasked with creating a simple chain in Databricks to generate text responses using a pre-trained generative model. The chain should take user input, process it (e.g., tokenization), generate a response, and format the output before returning it. Which approach best meets these requirements using Databricks features?",
+    "choices": [
+      "A. Create a Delta Live Table pipeline to manage the flow of data between each step.",
+      "B. Implement a single Python function that combines all steps and use MLflow to log inputs and outputs.",
+      "C. Create a Python class that defines each step as a method and use Databricks Workflows to call methods in sequence.",
+      "D. Define the steps in separate Databricks notebooks and use Jobs to chain them together."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 34,
+    "question": "You are building an application to extract named entities (e.g., company names, dates, monetary values) from financial documents like earnings reports and balance sheets. You need to choose a model for Named Entity Recognition (NER) tasks in the financial domain. Based on the model card metadata, which model is the best choice?",
+    "choices": [
+      "A. A BERT model fine-tuned for NER tasks in the general domain.",
+      "B. A GPT model pre-trained for language modeling on creative writing and storytelling tasks.",
+      "C. A RoBERTa model pre-trained on financial documents and fine-tuned for NER.",
+      "D. A model trained on movie reviews and optimized for sentiment analysis."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 35,
+    "question": "You have deployed a generative AI model that automatically writes marketing copy based on input parameters. After initial success, the model's outputs have become inconsistent, with some copy failing to engage users. You decide to set up a monitoring strategy to continuously assess the model's performance. What is the most effective monitoring approach for this use case?",
+    "choices": [
+      "A. Evaluate the perplexity score of the generated text in real-time.",
+      "B. Monitor user engagement metrics such as click-through rates and conversion rates.",
+      "C. Track the cosine similarity between input and output vectors.",
+      "D. Log the number of API calls made by the model over time."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 36,
+    "question": "You are developing a customer support chatbot that needs to handle a wide variety of inquiries across multiple domains, with a primary focus on generating conversational and natural-sounding responses. Which of the following LLM attributes should you prioritize when selecting the model for this task?",
+    "choices": [
+      "A. Large model size with extensive pre-training on diverse text data",
+      "B. A model with a low latency and limited vocabulary",
+      "C. Fine-tuning on a small, specialized dataset",
+      "D. A model optimized for extractive question answering"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 37,
+    "question": "You have received a batch of Microsoft Word (DOCX) documents with text, images, and formatting (e.g., bullet points, headings, tables). Your task is to extract the text while preserving its structure (headings, paragraphs, lists) for fine-tuning a generative AI model. The documents will be converted to structured JSON format. Which Python package is best for this task?\n",
+    "choices": [
+      "A. python-docx",
+      "B. PyMuPDF (also known as fitz)",
+      "C. pandas",
+      "D. BeautifulSoup"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 38,
+    "question": "You are deploying an LLM for sentiment analysis to classify customer feedback as positive, negative, or neutral. During testing, you encounter these metrics:\nPrecision: Measures the accuracy of positive classifications.\nRecall: Measures how many actual positive cases were correctly identified.\nLatency: Measures the time it takes for the model to process each input.\nF1 Score: Harmonic mean of precision and recall.\nGPU Utilization: Measures how efficiently the model is utilizing available GPU resources.\nWhich metrics should you prioritize to ensure both quality and efficiency in production?\n",
+    "choices": [
+      "A. GPU Utilization, Recall, F1 Score",
+      "B. Precision, Latency, GPU Utilization",
+      "C. Precision, F1 Score, Latency",
+      "D. Precision, Recall, GPU Utilization"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 39,
+    "question": "You are building a document classification system for a legal firm to classify documents into categories like contracts, court rulings, and legal opinions. You trained three models (X, Y, Z) with the following results:\nModel  Accuracy  Precision  Recall  F1 Score  Training T (h)  Inference T (ms)\nX              90%         88%         85%        86%           10                     180\nY              88%         90%         86%        88%            8                      160\nZ              85%         83%         89%        86%            6                       130\nThe firm prioritizes high precision and efficient inference for real-time use. Which model should you choose?",
+    "choices": [
+      "A. Ensemble of Models X and Z",
+      "B. Model X",
+      "C. Model Y",
+      "D. Model Z"
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 40,
+    "question": "You are deploying a generative AI-powered chatbot in a retail banking application using Databricks. To ensure that the chatbot does not give financial advice or expose sensitive information, you need to implement guardrails before going live. Which of the following is the most effective approach to enforce this requirement?",
+    "choices": [
+      "A. Use a rule-based content filter to block responses that mention financial products or sensitive data",
+      "B. Rely solely on prompt engineering to ask the model not to answer financial questions",
+      "C. Allow the model to generate all responses and manually review them in real time",
+      "D. Increase the number of output tokens to improve factual accuracy"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 41,
+    "question": "You developed a Retrieval-Augmented Generation (RAG) system for a legal question-answering platform that retrieves relevant documents and generates responses. After testing with 100 queries, the system retrieves 50 documents per query, with an average of 30 relevant ones, while the ground truth considers 40 relevant per query. Which pair of metrics best evaluates your retrieval system's performance?",
+    "choices": [
+      "A. Precision and Recall",
+      "B. Accuracy and Recall",
+      "C. Precision and F1 Score",
+      "D. F1 Score and Accuracy"
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 42,
+    "question": "You are designing a text generation system using a pre-trained large language model (LLM) on Databricks. The system will generate personalized product descriptions based on input product features. What is the best approach to decompose this requirement into manageable tasks?",
+    "choices": [
+      "A. Task 1: Pre-process by encoding into one-hot vectors; Task 2: Fine-tune LLM; Task 3: Deploy on Databricks Workflows.",
+      "B. Task 1: Pre-process by tokenizing/encoding; Task 2: Train new LLM from scratch; Task 3: Deploy using Databricks MLflow.",
+      "C. Task 1: Load data into Delta Lake and tokenize; Task 2: Fine-tune pre-trained LLM; Task 3: Deploy using Databricks Model Serving.",
+      "D. Task 1: Tokenize features and encode as word embeddings; Task 2: Train transformer from scratch; Task 3: Deploy using Model Serving."
+    ],
+    "correct_answer": "C",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 43,
+    "question": "You have deployed a RAG model using a document retriever for answer generation. Users report mismatched answers and documents. How can you use inference logs to diagnose and improve the retrieval component?",
+    "choices": [
+      "A. Check if the retrieved documents are relevant by comparing the top-ranked documents with the actual query.",
+      "B. Log the confidence score of the model's final output and use it to filter out low-confidence responses.",
+      "C. Log the number of documents retrieved per query and ensure it matches the expected number.",
+      "D. Analyze the cosine similarity scores between query embeddings and document embeddings."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 44,
+    "question": "You are tasked with deploying a Generative AI chatbot that relies on a Foundation Model API for generating responses to user queries. To ensure cost-efficiency and scalability, which of the following strategies is most effective for handling the interactions between the chatbot and the Foundation Model API?",
+    "choices": [
+      "A. Cache frequent queries and their responses to reduce the number of API calls and serve cached results.",
+      "B. Send all user queries to the Foundation Model API without any intermediate processing.",
+      "C. Use a fixed number of concurrent API calls with a timeout mechanism to handle all user requests.",
+      "D. Dynamically adjust the number of API calls based on user traffic, scaling up when traffic spikes and scaling down using autoscaling."
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 45,
+    "question": "While designing a pipeline to ingest source documents for a RAG system in Databricks, you are asked to pre-process PDF documents. Which of the following types of content is most likely to degrade retrieval quality and should be filtered during ingestion?",
+    "choices": [
+      "A. Customer use cases and case studies",
+      "B. Well-formed FAQs with concise answers",
+      "C. Technical glossary definitions at the end of the document",
+      "D. Repeated page numbers and \"Confidential\" stamps"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 46,
+    "question": "In a Databricks generative AI system, you are tasked with creating a prompt template that needs to expose available functions to users dynamically. What is the most critical aspect to consider when building this template to ensure it works efficiently and securely across your application?",
+    "choices": [
+      "A. Add input validation within the template to ensure that the functions exposed do not allow unauthorized access to sensitive data.",
+      "B. Rely on user-generated inputs to determine which functions to expose without any predefined templates.",
+      "C. Create separate API layers outside of the Databricks environment to handle function exposure.",
+      "D. Ensure that the prompt template hardcodes all available functions directly into the model code."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 47,
+    "question": "You are developing a Retrieval-Augmented Generation (RAG) application that helps with legal document review. The RAG system needs to be fed high-quality and relevant documents to ensure it can answer legal questions effectively. Which of the following types of documents should you prioritize to ensure your RAG application delivers accurate legal insights?",
+    "choices": [
+      "A. Personal blogs written by attorneys",
+      "B. Case law databases and court rulings",
+      "C. General news articles covering legal matters",
+      "D. Internal company HR policies"
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 48,
+    "question": "You are building a generative AI app in Databricks using a pre-trained transformer-based model, aiming to deploy it as a REST API for real-time requests. To ensure high availability, scalability, and minimize latency, you plan to integrate it with the Databricks Jobs API and optimize hardware resource usage. What is the best approach to achieve this?",
+    "choices": [
+      "A. Deploy the model on a shared cluster and use the Databricks REST API to make synchronous requests.",
+      "B. Package the model as a Databricks MLflow model and deploy it using Databricks Model Serving.",
+      "C. Use Databricks Delta Live Tables to stream the input data to the model.",
+      "D. Create a dedicated job cluster for the model and configure the cluster to auto-scale."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 49,
+    "question": "You are working with a Retrieval-Augmented Generation (RAG) application that uses a large language model (LLM) to generate responses. The cost of running this application is increasing due to high usage of the LLM for inference. What is the most effective way to use Databricks features to control costs without compromising the quality of responses?",
+    "choices": [
+      "A. Use model checkpointing to avoid retraining the LLM from scratch for each query",
+      "B. Decrease the number of tokens used for generation by reducing the max tokens parameter",
+      "C. Use the Databricks autoscaling feature to scale compute clusters based on LLM load",
+      "D. Employ prompt optimization techniques and cache common query results in Databricks"
+    ],
+    "correct_answer": "D",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 50,
+    "question": "You are implementing guardrails for a large language model (LLM) used in a customer support chatbot to prevent the generation of harmful or inappropriate content. Which approach would be the most effective in preventing negative outcomes from user inputs that contain offensive language or inappropriate queries?",
+    "choices": [
+      "A. Integrate a human-in-the-loop (HITL) system to manually review and approve every response.",
+      "B. Implement prompt engineering techniques to steer the model towards safe outputs.",
+      "C. Build a rule-based filter that blocks responses containing specific words or phrases.",
+      "D. Use regular expressions to filter offensive language in user inputs."
+    ],
+    "correct_answer": "B",
+    "is_multiple_choice": false
+  },
+  {
+    "question_number": 51,
+    "question": "You are deploying a Retrieval-Augmented Generation (RAG) application in Databricks, which combines the strengths of document retrieval and generative AI. What infrastructure or resource is most critical to efficiently serve features from your knowledge base and ensure smooth operation in production?",
+    "choices": [
+      "A. A feature store that supports real-time lookups and versioning of retrieved features.",
+      "B. A relational database to store embeddings and handle query retrievals.",
+      "C. A high-throughput message queue system for asynchronous document retrieval requests.",
+      "D. A data lake to store historical retrieval logs for future model fine-tuning."
+    ],
+    "correct_answer": "A",
+    "is_multiple_choice": false
+  }
+]
