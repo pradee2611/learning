@@ -5,6 +5,7 @@ import ExamMode from './components/ExamMode'
 import databrickDump from './data/databrickDump.json'
 import databrickMock2 from './data/DatabrickMock2.json'
 import databrickMock3 from './data/databrickMock3.json'
+import claudeArchitect from './data/claudeCertifiedArchitect.json'
 import './App.css'
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
     const allQuestionSets = [
       { data: databrickDump, source: 'Databricks Dump', key: 'dump' },
       { data: databrickMock2, source: 'Databricks Mock 2', key: 'mock2' },
-      { data: databrickMock3, source: 'Databricks Mock 3', key: 'mock3' }
+      { data: databrickMock3, source: 'Databricks Mock 3', key: 'mock3' },
+      { data: claudeArchitect, source: 'Claude Certified Architect (CCA-F)', key: 'cca' }
     ]
 
     // Store question set metadata
@@ -72,7 +74,8 @@ function App() {
           originalCorrectAnswer: originalCorrectAnswer, // Keep original for comparison (now normalized)
           source: questionSet.source, // Add source identifier
           sourceKey: questionSet.key, // Add source key for filtering
-          originalQuestionNumber: q.question_number // Keep original question number from source
+          originalQuestionNumber: q.question_number, // Keep original question number from source
+          explanation: q.explanation
         }
       })
       
